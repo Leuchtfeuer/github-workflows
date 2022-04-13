@@ -1,0 +1,19 @@
+on:
+  workflow_call:
+    inputs:
+      php-version:
+        required: true
+        type: number
+jobs:
+  php-cs-fixer:
+    name: PHP-CS-Fixer
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: PHP-CS-Fixer
+      uses: docker://oskarstark/php-cs-fixer-ga
+      with:
+        args: --config=./app/Build/config/php-cs/.php-cs-fixer.php
+    - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '[CODE] Codestyle'
