@@ -9,7 +9,7 @@ jobs:
     - name: PHP-CS-Fixer
       uses: docker://oskarstark/php-cs-fixer-ga
       with:
-        args: --config=./app/Build/config/php-cs/.php-cs-fixer.php
+        args: --config=./app/Build/config/php-cs/.php-cs-fixer.php --using-cache=no
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: '[CODE] Codestyle'
