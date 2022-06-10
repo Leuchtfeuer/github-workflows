@@ -2,4 +2,4 @@
 
 ## Table of contents
 
-* ci.yml -> Runs PHP-CS-Fixer and autocommits changes with the user whho triggered the caller action
+* ci.yml -> Runs PHP-CS-Fixer and autocommits changes with the user who triggered the caller action
